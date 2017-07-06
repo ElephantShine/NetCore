@@ -60,6 +60,7 @@
     <None Include="wwwroot\assets\images\about.png" />
     <None Include="wwwroot\assets\images\banner.jpg" />
     <None Include="wwwroot\assets\images\coming soon.jpg" />
+    <None Include="wwwroot\assets\images\favicon.ico" />
     <None Include="wwwroot\assets\images\grabbing.png" />
     <None Include="wwwroot\assets\images\home01.png" />
     <None Include="wwwroot\assets\images\home02.png" />
