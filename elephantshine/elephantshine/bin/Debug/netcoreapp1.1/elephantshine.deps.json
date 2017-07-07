@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.1",
-    "signature": "3603da162649af1e096f43bd3a572b034cacd890"
+    "signature": "2a682e1d28a85863c420ef6c38be2191f5180491"
   },
   "compilationOptions": {
     "defines": [
@@ -23,7 +23,7 @@
     ".NETCoreApp,Version=v1.1": {
       "elephantshine/1.0.0": {
         "dependencies": {
-          "Microsoft.ApplicationInsights.AspNetCore": "2.0.0",
+          "Microsoft.ApplicationInsights.AspNetCore": "2.1.0-beta5",
           "Microsoft.AspNetCore": "1.1.2",
           "Microsoft.AspNetCore.Mvc": "1.1.3",
           "Microsoft.AspNetCore.Rewrite": "1.0.2",
@@ -39,38 +39,23 @@
           "elephantshine.dll": {}
         }
       },
-      "microsoft.applicationinsights/2.2.0": {
+      "microsoft.applicationinsights/2.4.0-beta4": {
         "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Diagnostics.Debug": "4.3.0",
-          "System.Diagnostics.Tools": "4.3.0",
-          "System.Diagnostics.Tracing": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.IO": "4.3.0",
-          "System.IO.Compression": "4.3.0",
-          "System.Linq": "4.3.0",
-          "System.Net.Http": "4.3.2",
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Extensions": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Text.Encoding": "4.3.0",
-          "System.Text.Encoding.Extensions": "4.3.0",
-          "System.Text.RegularExpressions": "4.3.0",
-          "System.Threading": "4.3.0",
-          "System.Threading.Tasks": "4.3.0",
-          "System.Xml.XDocument": "4.3.0"
+          "NETStandard.Library": "1.6.1",
+          "System.Diagnostics.DiagnosticSource": "4.4.0-preview1-25214-03",
+          "System.Diagnostics.StackTrace": "4.3.0"
         },
         "runtime": {
-          "lib/netstandard1.5/Microsoft.ApplicationInsights.dll": {}
+          "lib/netstandard1.3/Microsoft.ApplicationInsights.dll": {}
         },
         "compile": {
-          "lib/netstandard1.5/Microsoft.ApplicationInsights.dll": {}
+          "lib/netstandard1.3/Microsoft.ApplicationInsights.dll": {}
         }
       },
-      "microsoft.applicationinsights.aspnetcore/2.0.0": {
+      "microsoft.applicationinsights.aspnetcore/2.1.0-beta5": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "2.2.0",
+          "Microsoft.ApplicationInsights": "2.4.0-beta4",
+          "Microsoft.ApplicationInsights.DependencyCollector": "2.4.0-beta4",
           "Microsoft.AspNetCore.Hosting": "1.1.2",
           "Microsoft.Extensions.Configuration": "1.1.2",
           "Microsoft.Extensions.Configuration.Json": "1.1.2",
@@ -84,6 +69,21 @@
         },
         "compile": {
           "lib/netstandard1.6/Microsoft.ApplicationInsights.AspNetCore.dll": {}
+        }
+      },
+      "microsoft.applicationinsights.dependencycollector/2.4.0-beta4": {
+        "dependencies": {
+          "Microsoft.ApplicationInsights": "2.4.0-beta4",
+          "Microsoft.Extensions.PlatformAbstractions": "1.1.0",
+          "NETStandard.Library": "1.6.1",
+          "System.Diagnostics.DiagnosticSource": "4.4.0-preview1-25214-03",
+          "System.Diagnostics.StackTrace": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.6/Microsoft.AI.DependencyCollector.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.6/Microsoft.AI.DependencyCollector.dll": {}
         }
       },
       "microsoft.aspnetcore/1.1.2": {
@@ -200,7 +200,7 @@
           "Microsoft.Extensions.Logging.Abstractions": "1.1.2",
           "Microsoft.Extensions.Options": "1.1.2",
           "NETStandard.Library": "1.6.1",
-          "System.Diagnostics.DiagnosticSource": "4.3.1",
+          "System.Diagnostics.DiagnosticSource": "4.4.0-preview1-25214-03",
           "System.Diagnostics.StackTrace": "4.3.0",
           "System.Reflection.Metadata": "1.4.1"
         },
@@ -236,7 +236,7 @@
           "Microsoft.Extensions.Options": "1.1.2",
           "Microsoft.Extensions.PlatformAbstractions": "1.1.0",
           "NETStandard.Library": "1.6.1",
-          "System.Diagnostics.DiagnosticSource": "4.3.1",
+          "System.Diagnostics.DiagnosticSource": "4.4.0-preview1-25214-03",
           "System.Diagnostics.StackTrace": "4.3.0",
           "System.Reflection.Metadata": "1.4.1",
           "System.Runtime.Loader": "4.3.0"
@@ -459,7 +459,7 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.1.0",
           "NETStandard.Library": "1.6.1",
           "System.Buffers": "4.3.0",
-          "System.Diagnostics.DiagnosticSource": "4.3.1"
+          "System.Diagnostics.DiagnosticSource": "4.4.0-preview1-25214-03"
         },
         "runtime": {
           "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.Core.dll": {}
@@ -909,7 +909,7 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.1",
           "System.Collections.Concurrent": "4.3.0",
           "System.ComponentModel": "4.3.0",
-          "System.Diagnostics.DiagnosticSource": "4.3.1",
+          "System.Diagnostics.DiagnosticSource": "4.4.0-preview1-25214-03",
           "System.Reflection.Emit": "4.3.0",
           "System.Reflection.Emit.Lightweight": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
@@ -1280,6 +1280,23 @@
           "ref/netstandard1.0/System.Diagnostics.Contracts.dll": {}
         }
       },
+      "system.diagnostics.diagnosticsource/4.4.0-preview1-25214-03": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
+        }
+      },
       "system.diagnostics.stacktrace/4.3.0": {
         "dependencies": {
           "System.IO.FileSystem": "4.3.0",
@@ -1461,7 +1478,7 @@
           "System.Collections.Immutable": "1.3.0",
           "System.ComponentModel": "4.3.0",
           "System.ComponentModel.Annotations": "4.3.0",
-          "System.Diagnostics.DiagnosticSource": "4.3.1",
+          "System.Diagnostics.DiagnosticSource": "4.4.0-preview1-25214-03",
           "System.Diagnostics.Process": "4.3.0",
           "System.Dynamic.Runtime": "4.3.0",
           "System.Globalization.Extensions": "4.3.0",
@@ -1830,19 +1847,6 @@
         },
         "compileOnly": true
       },
-      "system.diagnostics.diagnosticsource/4.3.1": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Diagnostics.Tracing": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Threading": "4.3.0"
-        },
-        "compile": {
-          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
-        },
-        "compileOnly": true
-      },
       "system.diagnostics.fileversioninfo/4.0.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -2184,7 +2188,7 @@
           "Microsoft.NETCore.Platforms": "1.1.0",
           "System.Collections": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
-          "System.Diagnostics.DiagnosticSource": "4.3.1",
+          "System.Diagnostics.DiagnosticSource": "4.4.0-preview1-25214-03",
           "System.Diagnostics.Tracing": "4.3.0",
           "System.Globalization": "4.3.0",
           "System.Globalization.Extensions": "4.3.0",
@@ -3026,19 +3030,26 @@
       "serviceable": false,
       "sha512": ""
     },
-    "microsoft.applicationinsights/2.2.0": {
+    "microsoft.applicationinsights/2.4.0-beta4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+JJ6qygUKQY2YnRfr0GlgdbKAhUqZhwd9zija0aKdDVQK60lQtnsBKzFY8/kMg0SH2MRXtmLkHG53oiNDQsLJQ==",
-      "path": "microsoft.applicationinsights/2.2.0",
-      "hashPath": "microsoft.applicationinsights.2.2.0.nupkg.sha512"
+      "sha512": "sha512-njTVO5XDI+UzwvmtdfSLVtspsNZ2gvQ/9I9iVcHogwPJcVH89+Enz772xRr1Wnh+0znCrU8Xppkglp1zVk7dkw==",
+      "path": "microsoft.applicationinsights/2.4.0-beta4",
+      "hashPath": "microsoft.applicationinsights.2.4.0-beta4.nupkg.sha512"
     },
-    "microsoft.applicationinsights.aspnetcore/2.0.0": {
+    "microsoft.applicationinsights.aspnetcore/2.1.0-beta5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-LcbwEaO9oA063w5yzxLgkxZkFIF9VCYxG98E2XZ2Ua/Uj2I3WMhyRp/gE7HI9sUapYRT3WCyJ/LYXT69WYrKow==",
-      "path": "microsoft.applicationinsights.aspnetcore/2.0.0",
-      "hashPath": "microsoft.applicationinsights.aspnetcore.2.0.0.nupkg.sha512"
+      "sha512": "sha512-rVyO3TSH2sThLIXmchwqccvG1tP/LhqzGoFfv6IkzW0ETwF8lhlGSO/s8D52Ickv+fI+LYMq2UC+i9OMt/bo2Q==",
+      "path": "microsoft.applicationinsights.aspnetcore/2.1.0-beta5",
+      "hashPath": "microsoft.applicationinsights.aspnetcore.2.1.0-beta5.nupkg.sha512"
+    },
+    "microsoft.applicationinsights.dependencycollector/2.4.0-beta4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AqaScTJqgG5KQjFl/qp6FApIfe54zT7f0tpIDkej1CGprCwdahJkRehTelwR59d8XRLKL9ZOlzTpHPYjvL8JPA==",
+      "path": "microsoft.applicationinsights.dependencycollector/2.4.0-beta4",
+      "hashPath": "microsoft.applicationinsights.dependencycollector.2.4.0-beta4.nupkg.sha512"
     },
     "microsoft.aspnetcore/1.1.2": {
       "type": "package",
@@ -3600,6 +3611,13 @@
       "path": "system.diagnostics.contracts/4.3.0",
       "hashPath": "system.diagnostics.contracts.4.3.0.nupkg.sha512"
     },
+    "system.diagnostics.diagnosticsource/4.4.0-preview1-25214-03": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zndSBwT1BV5tOU9UTYZ9UyVXZJETL1SEBCuRBDKMSOR0BtgmzftLmjp5lH6bXaIVnf3pd2JvfOcpphBInFPzhg==",
+      "path": "system.diagnostics.diagnosticsource/4.4.0-preview1-25214-03",
+      "hashPath": "system.diagnostics.diagnosticsource.4.4.0-preview1-25214-03.nupkg.sha512"
+    },
     "system.diagnostics.stacktrace/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -3956,13 +3974,6 @@
       "sha512": "sha512-ZUhUOdqmaG5Jk3Xdb8xi5kIyQYAA4PnTNlHx1mu9ZY3qv4ELIdKbnL/akbGaKi2RnNUWaZsAs31rvzFdewTj2g==",
       "path": "system.diagnostics.debug/4.3.0",
       "hashPath": "system.diagnostics.debug.4.3.0.nupkg.sha512"
-    },
-    "system.diagnostics.diagnosticsource/4.3.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-j72A3mwamUXPgDIU1TWyzea7yqz59+iO2cmXuyzvcfuszWGq9JRbWify1k33lLQophaXOIyhPkEevfP0k4M3wg==",
-      "path": "system.diagnostics.diagnosticsource/4.3.1",
-      "hashPath": "system.diagnostics.diagnosticsource.4.3.1.nupkg.sha512"
     },
     "system.diagnostics.fileversioninfo/4.0.0": {
       "type": "package",
