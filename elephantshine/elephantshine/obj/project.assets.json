@@ -669,6 +669,24 @@
           "lib/netstandard1.3/Microsoft.AspNetCore.ResponseCaching.Abstractions.dll": {}
         }
       },
+      "Microsoft.AspNetCore.Rewrite/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "1.1.2",
+          "Microsoft.AspNetCore.Http.Extensions": "1.1.2",
+          "Microsoft.Extensions.Configuration.Abstractions": "1.1.2",
+          "Microsoft.Extensions.FileProviders.Abstractions": "1.1.1",
+          "Microsoft.Extensions.Logging.Abstractions": "1.1.2",
+          "Microsoft.Extensions.Options": "1.1.2",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Rewrite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.AspNetCore.Rewrite.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Routing/1.1.2": {
         "type": "package",
         "dependencies": {
@@ -4180,6 +4198,19 @@
         "lib/netstandard1.3/Microsoft.AspNetCore.ResponseCaching.Abstractions.xml",
         "microsoft.aspnetcore.responsecaching.abstractions.1.1.2.nupkg.sha512",
         "microsoft.aspnetcore.responsecaching.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Rewrite/1.0.2": {
+      "sha512": "kUv86y0gj4Ki5ro/etU/rM30mSUXGK+k8SPfXm+PZ8YYRhUjLC6cwm2da/PhDKIcxmrtvC1Ua5GwjDs18HVfSA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.rewrite/1.0.2",
+      "files": [
+        "lib/net451/Microsoft.AspNetCore.Rewrite.dll",
+        "lib/net451/Microsoft.AspNetCore.Rewrite.xml",
+        "lib/netstandard1.3/Microsoft.AspNetCore.Rewrite.dll",
+        "lib/netstandard1.3/Microsoft.AspNetCore.Rewrite.xml",
+        "microsoft.aspnetcore.rewrite.1.0.2.nupkg.sha512",
+        "microsoft.aspnetcore.rewrite.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Routing/1.1.2": {
@@ -9763,6 +9794,7 @@
       "Microsoft.ApplicationInsights.AspNetCore >= 2.0.0",
       "Microsoft.AspNetCore >= 1.1.2",
       "Microsoft.AspNetCore.Mvc >= 1.1.3",
+      "Microsoft.AspNetCore.Rewrite >= 1.0.2",
       "Microsoft.AspNetCore.StaticFiles >= 1.1.2",
       "Microsoft.Extensions.Logging.Debug >= 1.1.2",
       "Microsoft.NETCore.App >= 1.1.2",
@@ -9828,6 +9860,10 @@
           "Microsoft.ApplicationInsights.AspNetCore": {
             "target": "Package",
             "version": "2.0.0"
+          },
+          "Microsoft.AspNetCore.Rewrite": {
+            "target": "Package",
+            "version": "1.0.2"
           },
           "Microsoft.AspNetCore.StaticFiles": {
             "target": "Package",
