@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\favicon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.3" />
@@ -16,6 +20,138 @@
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\.well-known\.acme-challenge\3zaIAs1MIXRQd6OAD0NSMFkva_98PMs2uzZJh3wv1tk" />
+    <None Include="wwwroot\assets\bootstrap\css\bootstrap-theme.css" />
+    <None Include="wwwroot\assets\bootstrap\css\bootstrap-theme.css.map" />
+    <None Include="wwwroot\assets\bootstrap\css\bootstrap-theme.min.css" />
+    <None Include="wwwroot\assets\bootstrap\css\bootstrap-theme.min.css.map" />
+    <None Include="wwwroot\assets\bootstrap\css\bootstrap.css" />
+    <None Include="wwwroot\assets\bootstrap\css\bootstrap.css.map" />
+    <None Include="wwwroot\assets\bootstrap\css\bootstrap.min.css" />
+    <None Include="wwwroot\assets\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\assets\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="wwwroot\assets\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\assets\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="wwwroot\assets\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="wwwroot\assets\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\assets\bootstrap\js\bootstrap.js" />
+    <None Include="wwwroot\assets\bootstrap\js\npm.js" />
+    <None Include="wwwroot\assets\css\animate.css" />
+    <None Include="wwwroot\assets\css\font-awesome.css" />
+    <None Include="wwwroot\assets\css\font-awesome.min.css" />
+    <None Include="wwwroot\assets\css\magnific-popup.css" />
+    <None Include="wwwroot\assets\css\owl.carousel.css" />
+    <None Include="wwwroot\assets\css\owl.theme.css" />
+    <None Include="wwwroot\assets\css\simple-line-icons.css" />
+    <None Include="wwwroot\assets\css\simple-line-icons.min.css" />
+    <None Include="wwwroot\assets\css\style.css" />
+    <None Include="wwwroot\assets\fonts\fontawesome-webfont.eot" />
+    <None Include="wwwroot\assets\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\assets\fonts\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\assets\fonts\fontawesome-webfont.woff" />
+    <None Include="wwwroot\assets\fonts\FontAwesome.otf" />
+    <None Include="wwwroot\assets\fonts\Simple-Line-Icons.dev.svg" />
+    <None Include="wwwroot\assets\fonts\Simple-Line-Icons.eot" />
+    <None Include="wwwroot\assets\fonts\Simple-Line-Icons.svg" />
+    <None Include="wwwroot\assets\fonts\Simple-Line-Icons.ttf" />
+    <None Include="wwwroot\assets\fonts\Simple-Line-Icons.woff" />
+    <None Include="wwwroot\assets\images\about.png" />
+    <None Include="wwwroot\assets\images\banner.jpg" />
+    <None Include="wwwroot\assets\images\coming soon.jpg" />
+    <None Include="wwwroot\assets\images\favicon.ico" />
+    <None Include="wwwroot\assets\images\grabbing.png" />
+    <None Include="wwwroot\assets\images\home01.png" />
+    <None Include="wwwroot\assets\images\home02.png" />
+    <None Include="wwwroot\assets\images\home03.png" />
+    <None Include="wwwroot\assets\images\preloader.gif" />
+    <None Include="wwwroot\assets\js\bootstrap.min.js" />
+    <None Include="wwwroot\assets\js\custom-portfolio.js" />
+    <None Include="wwwroot\assets\js\custom-shuffle-init.js" />
+    <None Include="wwwroot\assets\js\custom.js" />
+    <None Include="wwwroot\assets\js\gmaps.js" />
+    <None Include="wwwroot\assets\js\icons-lte-ie7.js" />
+    <None Include="wwwroot\assets\js\imagesloaded.pkgd.js" />
+    <None Include="wwwroot\assets\js\jquery-1.11.1.min.js" />
+    <None Include="wwwroot\assets\js\jquery.backstretch.min.js" />
+    <None Include="wwwroot\assets\js\jquery.fitvids.js" />
+    <None Include="wwwroot\assets\js\jquery.magnific-popup.min.js" />
+    <None Include="wwwroot\assets\js\jquery.parallax-1.1.3.js" />
+    <None Include="wwwroot\assets\js\jquery.shuffle.min.js" />
+    <None Include="wwwroot\assets\js\jquery.sticky.js" />
+    <None Include="wwwroot\assets\js\owl.carousel.min.js" />
+    <None Include="wwwroot\assets\js\smoothscroll.min.js" />
+    <None Include="wwwroot\assets\js\twitterFetcher.js" />
+    <None Include="wwwroot\assets\js\wow.min.js" />
+    <None Include="wwwroot\favicon.ico" />
+    <None Include="wwwroot\portfolio\Agile-Tour-Taichung-2015\01.png" />
+    <None Include="wwwroot\portfolio\Agile-Tour-Taichung-2015\02.png" />
+    <None Include="wwwroot\portfolio\Agile-Tour-Taichung-2015\index.html" />
+    <None Include="wwwroot\portfolio\Agile-Tour-Taichung-2017\01.png" />
+    <None Include="wwwroot\portfolio\Agile-Tour-Taichung-2017\02.png" />
+    <None Include="wwwroot\portfolio\Agile-Tour-Taichung-2017\03.png" />
+    <None Include="wwwroot\portfolio\Agile-Tour-Taichung-2017\04.png" />
+    <None Include="wwwroot\portfolio\Agile-Tour-Taichung-2017\index.html" />
+    <None Include="wwwroot\portfolio\Flower-Fruit-Downshifting\01.png" />
+    <None Include="wwwroot\portfolio\Flower-Fruit-Downshifting\02.png" />
+    <None Include="wwwroot\portfolio\Flower-Fruit-Downshifting\03.png" />
+    <None Include="wwwroot\portfolio\Flower-Fruit-Downshifting\04.png" />
+    <None Include="wwwroot\portfolio\Flower-Fruit-Downshifting\index.html" />
+    <None Include="wwwroot\portfolio\Food-Fun\01.png" />
+    <None Include="wwwroot\portfolio\Food-Fun\02.png" />
+    <None Include="wwwroot\portfolio\Food-Fun\03.png" />
+    <None Include="wwwroot\portfolio\Food-Fun\04.png" />
+    <None Include="wwwroot\portfolio\Food-Fun\05.png" />
+    <None Include="wwwroot\portfolio\Food-Fun\06.png" />
+    <None Include="wwwroot\portfolio\Food-Fun\07.png" />
+    <None Include="wwwroot\portfolio\Food-Fun\index.html" />
+    <None Include="wwwroot\portfolio\Interior-Flower-Life\01.png" />
+    <None Include="wwwroot\portfolio\Interior-Flower-Life\02.png" />
+    <None Include="wwwroot\portfolio\Interior-Flower-Life\03.png" />
+    <None Include="wwwroot\portfolio\Interior-Flower-Life\04.png" />
+    <None Include="wwwroot\portfolio\Interior-Flower-Life\index.html" />
+    <None Include="wwwroot\portfolio\JOJO-Bridal-Atelier\01.png" />
+    <None Include="wwwroot\portfolio\JOJO-Bridal-Atelier\02.png" />
+    <None Include="wwwroot\portfolio\JOJO-Bridal-Atelier\03.png" />
+    <None Include="wwwroot\portfolio\JOJO-Bridal-Atelier\04.png" />
+    <None Include="wwwroot\portfolio\JOJO-Bridal-Atelier\05.png" />
+    <None Include="wwwroot\portfolio\JOJO-Bridal-Atelier\index.html" />
+    <None Include="wwwroot\portfolio\My-First-Piano-Theory\01.png" />
+    <None Include="wwwroot\portfolio\My-First-Piano-Theory\02.png" />
+    <None Include="wwwroot\portfolio\My-First-Piano-Theory\03.png" />
+    <None Include="wwwroot\portfolio\My-First-Piano-Theory\04.png" />
+    <None Include="wwwroot\portfolio\My-First-Piano-Theory\05.png" />
+    <None Include="wwwroot\portfolio\My-First-Piano-Theory\06.png" />
+    <None Include="wwwroot\portfolio\My-First-Piano-Theory\07.png" />
+    <None Include="wwwroot\portfolio\My-First-Piano-Theory\08.png" />
+    <None Include="wwwroot\portfolio\My-First-Piano-Theory\09.png" />
+    <None Include="wwwroot\portfolio\My-First-Piano-Theory\index.html" />
+    <None Include="wwwroot\portfolio\Ocean-Taiwan\01.png" />
+    <None Include="wwwroot\portfolio\Ocean-Taiwan\02.png" />
+    <None Include="wwwroot\portfolio\Ocean-Taiwan\03.png" />
+    <None Include="wwwroot\portfolio\Ocean-Taiwan\04.png" />
+    <None Include="wwwroot\portfolio\Ocean-Taiwan\05.png" />
+    <None Include="wwwroot\portfolio\Ocean-Taiwan\06.png" />
+    <None Include="wwwroot\portfolio\Ocean-Taiwan\07.png" />
+    <None Include="wwwroot\portfolio\Ocean-Taiwan\index.html" />
+    <None Include="wwwroot\portfolio\Opera-Legend-Der-Ring-des-Nibelungen\01.png" />
+    <None Include="wwwroot\portfolio\Opera-Legend-Der-Ring-des-Nibelungen\02.png" />
+    <None Include="wwwroot\portfolio\Opera-Legend-Der-Ring-des-Nibelungen\03.png" />
+    <None Include="wwwroot\portfolio\Opera-Legend-Der-Ring-des-Nibelungen\04.png" />
+    <None Include="wwwroot\portfolio\Opera-Legend-Der-Ring-des-Nibelungen\05.png" />
+    <None Include="wwwroot\portfolio\Opera-Legend-Der-Ring-des-Nibelungen\06.png" />
+    <None Include="wwwroot\portfolio\Opera-Legend-Der-Ring-des-Nibelungen\index.html" />
+    <None Include="wwwroot\portfolio\Taishin-Arts\01.png" />
+    <None Include="wwwroot\portfolio\Taishin-Arts\02.png" />
+    <None Include="wwwroot\portfolio\Taishin-Arts\03.png" />
+    <None Include="wwwroot\portfolio\Taishin-Arts\04.png" />
+    <None Include="wwwroot\portfolio\Taishin-Arts\05.png" />
+    <None Include="wwwroot\portfolio\Taishin-Arts\06.png" />
+    <None Include="wwwroot\portfolio\Taishin-Arts\07.png" />
+    <None Include="wwwroot\portfolio\Taishin-Arts\08.png" />
+    <None Include="wwwroot\portfolio\Taishin-Arts\index.html" />
   </ItemGroup>
 
 </Project>

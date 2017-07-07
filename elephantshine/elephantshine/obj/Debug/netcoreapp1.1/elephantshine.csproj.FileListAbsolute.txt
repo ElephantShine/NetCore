@@ -8,3 +8,13 @@ D:\vso es git\elephantshine\elephantshine\elephantshine\obj\Debug\netcoreapp1.1\
 D:\vso es git\elephantshine\elephantshine\elephantshine\obj\Debug\netcoreapp1.1\elephantshine.AssemblyInfo.cs
 D:\vso es git\elephantshine\elephantshine\elephantshine\obj\Debug\netcoreapp1.1\elephantshine.dll
 D:\vso es git\elephantshine\elephantshine\elephantshine\obj\Debug\netcoreapp1.1\elephantshine.pdb
+E:\VSO ES Git\elephantshine\elephantshine\elephantshine\bin\Debug\netcoreapp1.1\elephantshine.deps.json
+E:\VSO ES Git\elephantshine\elephantshine\elephantshine\bin\Debug\netcoreapp1.1\elephantshine.runtimeconfig.json
+E:\VSO ES Git\elephantshine\elephantshine\elephantshine\bin\Debug\netcoreapp1.1\elephantshine.runtimeconfig.dev.json
+E:\VSO ES Git\elephantshine\elephantshine\elephantshine\bin\Debug\netcoreapp1.1\elephantshine.dll
+E:\VSO ES Git\elephantshine\elephantshine\elephantshine\bin\Debug\netcoreapp1.1\elephantshine.pdb
+E:\VSO ES Git\elephantshine\elephantshine\elephantshine\obj\Debug\netcoreapp1.1\elephantshine.csprojResolveAssemblyReference.cache
+E:\VSO ES Git\elephantshine\elephantshine\elephantshine\obj\Debug\netcoreapp1.1\elephantshine.csproj.CoreCompileInputs.cache
+E:\VSO ES Git\elephantshine\elephantshine\elephantshine\obj\Debug\netcoreapp1.1\elephantshine.AssemblyInfo.cs
+E:\VSO ES Git\elephantshine\elephantshine\elephantshine\obj\Debug\netcoreapp1.1\elephantshine.dll
+E:\VSO ES Git\elephantshine\elephantshine\elephantshine\obj\Debug\netcoreapp1.1\elephantshine.pdb
