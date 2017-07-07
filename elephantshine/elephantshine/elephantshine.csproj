@@ -6,6 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\.well-known\**" />
+    <Content Remove="wwwroot\.well-known\**" />
+    <EmbeddedResource Remove="wwwroot\.well-known\**" />
+    <None Remove="wwwroot\.well-known\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="wwwroot\favicon.ico" />
   </ItemGroup>
 
@@ -13,6 +20,7 @@
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Rewrite" Version="1.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.2" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.2" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.2" />
@@ -23,7 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\.well-known\.acme-challenge\3zaIAs1MIXRQd6OAD0NSMFkva_98PMs2uzZJh3wv1tk" />
     <None Include="wwwroot\assets\bootstrap\css\bootstrap-theme.css" />
     <None Include="wwwroot\assets\bootstrap\css\bootstrap-theme.css.map" />
     <None Include="wwwroot\assets\bootstrap\css\bootstrap-theme.min.css" />
