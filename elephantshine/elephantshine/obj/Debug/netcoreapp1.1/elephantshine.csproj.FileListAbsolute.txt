@@ -3,7 +3,6 @@ D:\vso es git\elephantshine\elephantshine\elephantshine\bin\Debug\netcoreapp1.1\
 D:\vso es git\elephantshine\elephantshine\elephantshine\bin\Debug\netcoreapp1.1\elephantshine.runtimeconfig.dev.json
 D:\vso es git\elephantshine\elephantshine\elephantshine\bin\Debug\netcoreapp1.1\elephantshine.dll
 D:\vso es git\elephantshine\elephantshine\elephantshine\bin\Debug\netcoreapp1.1\elephantshine.pdb
-D:\vso es git\elephantshine\elephantshine\elephantshine\obj\Debug\netcoreapp1.1\elephantshine.csprojResolveAssemblyReference.cache
 D:\vso es git\elephantshine\elephantshine\elephantshine\obj\Debug\netcoreapp1.1\elephantshine.csproj.CoreCompileInputs.cache
 D:\vso es git\elephantshine\elephantshine\elephantshine\obj\Debug\netcoreapp1.1\elephantshine.AssemblyInfo.cs
 D:\vso es git\elephantshine\elephantshine\elephantshine\obj\Debug\netcoreapp1.1\elephantshine.dll
