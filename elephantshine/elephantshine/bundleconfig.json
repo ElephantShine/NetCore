@@ -10,16 +10,7 @@
             "wwwroot/assets/css/owl.carousel.css",
             "wwwroot/assets/css/superslides.css",
             "wwwroot/assets/css/vertical.css",
-            "wwwroot/assets/css/animate.css"
-        ],
-        "minify": {
-            "enabled": true,
-            "renameLocals": true
-        }
-    },
-    {
-        "outputFileName": "wwwroot/assets/css/bundle_style.css",
-        "inputFiles": [
+            "wwwroot/assets/css/animate.css",
             "wwwroot/assets/css/style.css",
             "wwwroot/assets/css/colors/wisteria.css"
         ],
@@ -47,16 +38,6 @@
             "wwwroot/assets/js/wow.js",
             "wwwroot/assets/js/smoothscroll.js",
             "wwwroot/assets/js/submenu-fix.js",
-            "wwwroot/assets/js/contact.js"
-        ],
-        "minify": {
-            "enabled": true,
-            "renameLocals": true
-        }
-    },
-    {
-        "outputFileName": "wwwroot/assets/js/custom.min.js",
-        "inputFiles": [
             "wwwroot/assets/js/custom.js"
         ],
         "minify": {
