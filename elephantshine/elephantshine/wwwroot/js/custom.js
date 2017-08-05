@@ -47,7 +47,7 @@
 			play: 10000,
 			animation: 'fade',
 			animation_speed: 800,
-			pagination: true,
+			pagination: true
 		});
 
 		$(".rotate").textrotator({
