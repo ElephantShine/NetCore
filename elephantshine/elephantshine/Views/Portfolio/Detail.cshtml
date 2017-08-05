@@ -1,0 +1,44 @@
+﻿@using elephantshine.Models
+@model Portfolio
+
+@{
+    ViewBag.OgImage = $"{Model.BaseUrl}/Portfolio/{Model.Path}/01.png";
+    ViewBag.PageUrl = $"{Model.BaseUrl}/Portfolio/{Model.Path}";
+    ViewBag.BaseUrl = Model.BaseUrl;
+}    
+
+<div class="wrapper">
+    @*<section id="hero" class="module-hero module-parallax module-overlay-dark-1" data-background="/assets/images/PortfolioBanner.png">
+        <div class="hero-caption">
+            <div class="hero-text">
+                <h1 class="hero-title m-t-70">WORK 日常的綻放</h1>
+                <p class="lead m-t-40">過去的經驗加上一直存在的熱情，滿足客戶的需求，我們的未來是越來越迷人的風景！</p>
+            </div>
+        </div>
+    </section>*@
+    <section class="module module-w">
+        <div class="container">
+            <div class="row m-b-70">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <h2>@Model.Title</h2>
+                    <h3>@Model.SubTitle</h3>
+                    @Html.Raw(Model.Content)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    @for (int i = 1; i <= Model.ImgCount; i++)
+                    {
+                        var url = $"{Model.Path}/{i:00}.png";
+
+                        <p class="project-gallery">
+                            <a href="@url" class="project-gallery">
+                                <img src="@url" alt="">
+                            </a>
+                        </p>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

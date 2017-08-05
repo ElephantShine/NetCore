@@ -1,4 +1,11 @@
-﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+﻿@using elephantshine.Models
+@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+
+@{
+    var ogImage = ViewBag.OgImage ?? "https://www.elephantshine.com/assets/images/banner.jpg";
+    var url = ViewBag.PageUrl ?? "https://www.elephantshine.com";
+}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,121 +19,126 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>象晴設計 ElephantShine</title>
 
-    <link rel="icon" href="assets/images/favicon.ico?v=1" type="image/x-icon">
-    <link rel="SHORTCUT ICON" href="assets/images/favicon.ico?v=1" type="image/x-icon">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="~/assets/images/favicon.ico" type="image/x-icon" asp-append-version="true">
+    <link rel="SHORTCUT ICON" href="~/assets/images/favicon.ico" type="image/x-icon" asp-append-version="true">
+    <link rel="apple-touch-icon" href="~/assets/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/assets/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/assets/images/favicon.ico">
 
-    <meta property="og:url" content="http://www.elephantshine.com/">
+    <meta property="og:url" content="@url">
     <meta property="og:title" content="象晴設計">
     <meta property="og:description" content="歡迎光臨 象晴設計！在這兒，晴天非外在，而是心情！讓咱們一同帶著愉快的心，完成每件最重要的專案！">
     <meta property="og:site_name" content="象晴設計">
-    <meta property="og:image" content="http://www.elephantshine.com/assets/images/banner.jpg" />
+    <meta property="og:image" content="@ogImage" />
+    <meta property="og:image:width" content="940" />
+    <meta property="og:image:height" content="585" />
     <meta property="og:type" content="website" />
-    <meta property="article:publisher" content="https://www.facebook.com/elephantshine2016" />
+    @*<meta property="article:publisher" content="https://www.facebook.com/elephantshine2016" />*@
 
     <meta itemprop="name" content="象晴設計">
-    <meta itemprop="image" content="http://www.elephantshine.com/assets/images/banner.jpg">
+    <meta itemprop="image" content="@ogImage">
     <meta itemprop="description" content="歡迎光臨 象晴設計！在這兒，晴天非外在，而是心情！讓咱們一同帶著愉快的心，完成每件最重要的專案！">
 
     <meta name="twitter:title" content="象晴設計" />
-    <meta name="twitter:url" content="http://www.elephantshine.com/" />
-    <meta name="twitter:image" content="http://www.elephantshine.com/assets/images/banner.jpg" />
+    <meta name="twitter:url" content="@url" />
+    <meta name="twitter:image" content="@ogImage" />
     <meta name="twitter:site" content="@@象晴設計" />
 
-    <link rel="alternate" hreflang="zh-TW" href="http://www.elephantshine.com/" />
+    <link rel="alternate" hreflang="zh-TW" href="@url" />
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />   
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"/>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-    <link rel="stylesheet" href="assets/css/simple-line-icons.min.css" media="screen" asp-append-version="true" >
-    <link rel="stylesheet" href="assets/css/style.min.css?v=20170107" media="screen" asp-append-version="true" >
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,400italic,700" rel="stylesheet" type="text/css">
 
-    @*<environment names="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/assets/css/bundle.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/assets/css/bundle_style.min.css" rel="stylesheet" asp-append-version="true">
+
+    <environment names="Development">
+
     </environment>
-    <environment names="Staging,Production">
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>
-    @Html.Raw(JavaScriptSnippet.FullScript)*@
-    
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K9K6Q9');</script>
+    <environment names="Production">
+        @*<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+                  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+            <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />*@
+
+        <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-K9K6Q9');</script>
         <!-- End Google Tag Manager -->
+    </environment>
+    @Html.Raw(JavaScriptSnippet.FullScript)
+
 </head>
 <body>
+    <environment names="Production">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9K6Q9"
+                    height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    </environment>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9K6Q9"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    
-@RenderBody()
+    <div class="page-loader">
+        <div class="loader">Loading...</div>
+    </div>
 
-<script src="https://use.typekit.net/fft2wom.js?v=20161012"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
+    @await Html.PartialAsync("_Navbar")
 
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="assets/js/jquery-1.11.1.min.js"\x3C/script>')</script>
-    
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script>$.fn.modal || document.write('<script src="assets/js/bootstrap.min.js"\x3C/script>')</script>
+    @RenderBody()
 
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-<script>$.magnificPopup || document.write('<script src="assets/js/jquery.magnific-popup.min.js"\x3C/script>')</script>
+    @await Html.PartialAsync("_Footer")
 
-<script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
-    
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.js"></script>
-<script>$.fn.imagesLoaded || document.write('<script src="assets/js/imagesloaded.pkgd.js"\x3C/script>')</script>
+    <div class="scroll-up">
+        <a href="#totop"><i class="fa fa-angle-up"></i></a>
+    </div>
 
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
-<script>$.fn.owlCarousel || document.write('<script src="assets/js/owl.carousel.min.js"\x3C/script>')</script>
+    <script src="https://use.typekit.net/fft2wom.js"></script>
+    <script>try {Typekit.load({ async: true });} catch (e) {}</script>
 
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.3/jquery.sticky.min.js"></script>
-<script>$.fn.sticky || document.write('<script src="assets/js/jquery.sticky.js"\x3C/script>')</script>
+    <script src="~/assets/js/bundle.min.js" asp-append-version="true"></script>
+    <script src="~/assets/js/custom.min.js" asp-append-version="true"></script>
 
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-<script>window.WOW || document.write('<script src="assets/js/wow.min.js"\x3C/script>')</script>
-    
-<script src="assets/js/jquery.shuffle.min.js" asp-append-version="true"></script>
-<script src="assets/js/smoothscroll.min.js" asp-append-version="true"></script>
+    @*<environment names="Development">
+            <script src="~/assets/js/jquery.parallax-1.1.3.min.js" asp-append-version="true"></script>
+            <script src="~/assets/js/jquery.superslides.min.js" asp-append-version="true"></script>
+            <script src="~/assets/js/jquery.mb.YTPlayer.min.js" asp-append-version="true"></script>
+            <script src="~/assets/js/jquery.simple-text-rotator.min.js" asp-append-version="true"></script>
+            <script src="~/assets/js/imagesloaded.pkgd.js" asp-append-version="true"></script>
+            <script src="~/assets/js/isotope.pkgd.min.js" asp-append-version="true"></script>
+            <script src="~/assets/js/jquery.magnific-popup.min.js" asp-append-version="true"></script>
+            <script src="~/assets/js/owl.carousel.min.js" asp-append-version="true"></script>
+            <script src="~/assets/js/jquery.fitvids.min.js" asp-append-version="true"></script>
+            <script src="~/assets/js/jqBootstrapValidation.min.js" asp-append-version="true"></script>
+            <script src="~/assets/js/appear.min.js" asp-append-version="true"></script>
+            <script src="~/assets/js/wow.min.js" asp-append-version="true"></script>
+            <script src="~/assets/js/smoothscroll.min.js" asp-append-version="true"></script>
+            <script src="~/assets/js/submenu-fix.min.js" asp-append-version="true"></script>
+            <script src="~/assets/js/contact.min.js" asp-append-version="true"></script>
+        </environment>
+        <environment names="Staging,Production">
+            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery"
+                    crossorigin="anonymous"
+                    integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+            </script>
+            <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                    crossorigin="anonymous"
+                    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+            </script>
+            <script src="~/js/site.min.js" asp-append-version="true"></script>
+        </environment>*@
 
-<script src="assets/js/custom.js?v=20170107" asp-append-version="true"></script>
-
-@*<environment names="Development">
-    <script src="~/lib/jquery/dist/jquery.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-</environment>
-<environment names="Staging,Production">
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-            asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-            asp-fallback-test="window.jQuery"
-            crossorigin="anonymous"
-            integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
-    </script>
-    <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-            asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-            asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-            crossorigin="anonymous"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
-    </script>
-    <script src="~/js/site.min.js" asp-append-version="true"></script>
-</environment>*@
-    
-@*<link href="assets/css/imgStyle.min.css?v=20170107" rel="stylesheet" media="screen">*@
-
-@RenderSection("Scripts", required: false)
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

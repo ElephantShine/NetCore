@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using elephantshine.Models;
+using elephantshine.Models.Enum;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -10,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Rewrite;
+using Microsoft.Extensions.Options;
 using Microsoft.Net.Http.Headers;
 
 namespace elephantshine
@@ -24,7 +27,10 @@ namespace elephantshine
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
+            CurrentEnvironment = env;
         }
+
+        public IHostingEnvironment CurrentEnvironment { get; set; }
 
         public IConfigurationRoot Configuration { get; }
 
@@ -33,10 +39,18 @@ namespace elephantshine
         {
             // Add framework services.
             services.AddMvc();
-            services.Configure<MvcOptions>(options =>
+
+            if (CurrentEnvironment.IsProduction())
             {
-                options.Filters.Add(new RequireHttpsAttribute());
-            });
+                services.Configure<MvcOptions>(options =>
+                {
+                    options.Filters.Add(new RequireHttpsAttribute());
+                });
+            }
+
+            services.Configure<List<Portfolio>>(Configuration.GetSection("Portfolios"));
+            services.Configure<List<EnumCategory>>(Configuration.GetSection("EnableCategorys"));
+            services.Configure<Settings>(Configuration.GetSection("Settings"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,9 +59,6 @@ namespace elephantshine
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            var options = new RewriteOptions().AddRedirectToHttps();
-            app.UseRewriter(options);
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -55,6 +66,7 @@ namespace elephantshine
             }
             else
             {
+                app.UseRewriter(new RewriteOptions().AddRedirectToHttps());
                 app.UseExceptionHandler("/Home/Error");
             }
 
@@ -73,6 +85,7 @@ namespace elephantshine
                     name: "default",
                     template: "{controller=Home}/{action=Index}");
             });
+
         }
     }
 }

@@ -54,8 +54,8 @@
 }
 
 /* mouse grab icon */
-.grabbing { 
-    cursor:url(../images/grabbing.png) 8 8, move;
+.grabbing {
+    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAO0lEQVQ4y2NgGHbgPxTjY+PWDAP42PgM+k8IwNRQZAg+A/5TYsB/UgBFBtDM/0QZQkxawGsI3QygLwAAbjZlqS88cqkAAAAASUVORK5CYII=) 8 8, move;
 }
 
 /* fix */

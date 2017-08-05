@@ -1,30 +1,67 @@
 [
-  {
-    "outputFileName": "wwwroot/css/site.min.css",
-    "inputFiles": [
-      "wwwroot/css/site.css"
-    ]
-  },
-  {
-    "outputFileName": "wwwroot/js/site.min.js",
-    "inputFiles": [
-      "wwwroot/js/site.js"
-    ],
-    "minify": {
-      "enabled": true,
-      "renameLocals": true
+    {
+        "outputFileName": "wwwroot/assets/css/bundle.css",
+        "inputFiles": [
+            "wwwroot/assets/css/bootstrap.css",
+            "wwwroot/assets/css/font-awesome.css",
+            "wwwroot/assets/css/simple-line-icons.css",
+            "wwwroot/assets/css/simpletextrotator.css",
+            "wwwroot/assets/css/magnific-popup.css",
+            "wwwroot/assets/css/owl.carousel.css",
+            "wwwroot/assets/css/superslides.css",
+            "wwwroot/assets/css/vertical.css",
+            "wwwroot/assets/css/animate.css"
+        ],
+        "minify": {
+            "enabled": true,
+            "renameLocals": true
+        }
+    },
+    {
+        "outputFileName": "wwwroot/assets/css/bundle_style.css",
+        "inputFiles": [
+            "wwwroot/assets/css/style.css",
+            "wwwroot/assets/css/colors/wisteria.css"
+        ],
+        "minify": {
+            "enabled": true,
+            "renameLocals": true
+        }
+    },
+    {
+        "outputFileName": "wwwroot/assets/js/bundle.js",
+        "inputFiles": [
+            "wwwroot/assets/js/jquery.js",
+            "wwwroot/assets/js/bootstrap.js",
+            "wwwroot/assets/js/jquery.parallax-1.1.3.js",
+            "wwwroot/assets/js/jquery.superslides.js",
+            "wwwroot/assets/js/jquery.mb.YTPlayer.js",
+            "wwwroot/assets/js/jquery.simple-text-rotator.js",
+            "wwwroot/assets/js/imagesloaded.pkgd.js",
+            "wwwroot/assets/js/isotope.pkgd.js",
+            "wwwroot/assets/js/jquery.magnific-popup.js",
+            "wwwroot/assets/js/owl.carousel.js",
+            "wwwroot/assets/js/jquery.fitvids.js",
+            "wwwroot/assets/js/jqBootstrapValidation.js",
+            "wwwroot/assets/js/appear.js",
+            "wwwroot/assets/js/wow.js",
+            "wwwroot/assets/js/smoothscroll.js",
+            "wwwroot/assets/js/submenu-fix.js",
+            "wwwroot/assets/js/contact.js"
+        ],
+        "minify": {
+            "enabled": true,
+            "renameLocals": true
+        }
+    },
+    {
+        "outputFileName": "wwwroot/assets/js/custom.min.js",
+        "inputFiles": [
+            "wwwroot/assets/js/custom.js"
+        ],
+        "minify": {
+            "enabled": true,
+            "renameLocals": true
+        }
     }
-  },
-  {
-    "outputFileName": "wwwroot/assets/css/style.min.css",
-    "inputFiles": [
-      "wwwroot/assets/css/style.css"
-    ]
-  },
-  {
-    "outputFileName": "wwwroot/assets/css/imgStyle.min.css",
-    "inputFiles": [
-      "wwwroot/assets/css/imgStyle.css"
-    ]
-  }
 ]
