@@ -1,7 +1,7 @@
 ﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
 
 @{
-    var ogImage = ViewBag.OgImage ?? "https://www.elephantshine.com/assets/images/banner.jpg";
+    var ogImage = ViewBag.OgImage ?? "https://www.elephantshine.com/images/banner.jpg";
     var url = ViewBag.PageUrl ?? "https://www.elephantshine.com";
 }
 
@@ -16,11 +16,11 @@
     <meta name="keywords" content="台中設計公司、平面設計、海報設計、型錄設計、DM設計、CIS設計、包裝設計、專業品牌設計、形象設計、商標設計、品牌標誌設計、包裝印刷、創意包裝、店卡設計、看板設計、提袋設計、雜誌排版LOGO設計、名片設計、廣告設計、手冊設計、書籍排版">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>象晴設計 ElephantShine</title>
-    <link rel="icon" href="~/assets/images/favicon.ico" type="image/x-icon" asp-append-version="true">
-    <link rel="SHORTCUT ICON" href="~/assets/images/favicon.ico" type="image/x-icon" asp-append-version="true">
-    <link rel="apple-touch-icon" href="~/assets/images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="72x72" href="~/assets/images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="114x114" href="~/assets/images/favicon.ico">
+    <link rel="icon" href="~/images/favicon.ico" type="image/x-icon" asp-append-version="true">
+    <link rel="SHORTCUT ICON" href="~/images/favicon.ico" type="image/x-icon" asp-append-version="true">
+    <link rel="apple-touch-icon" href="~/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/images/favicon.ico">
     <meta property="og:url" content="@url">
     <meta property="og:title" content="象晴設計">
     <meta property="og:description" content="歡迎光臨 象晴設計！在這兒，晴天非外在，而是心情！讓咱們一同帶著愉快的心，完成每件最重要的專案！">
@@ -38,9 +38,8 @@
     <meta name="twitter:site" content="@@象晴設計" />
     <link rel="alternate" hreflang="zh-TW" href="@url" />
 
-    <link href="~/assets/css/bundle.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/bundle.min.css" rel="stylesheet" asp-append-version="true" />
     <environment names="Development">
-
     </environment>
     <environment names="Production">
         @*<link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -72,24 +71,24 @@
 
     <script src="https://use.typekit.net/fft2wom.js"></script>
     <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
-    <script src="~/assets/js/bundle.min.js" asp-append-version="true"></script>
+    <script src="~/js/bundle.min.js" asp-append-version="true"></script>
 
     @*<environment names="Development">
-            <script src="~/assets/js/jquery.parallax-1.1.3.min.js" asp-append-version="true"></script>
-            <script src="~/assets/js/jquery.superslides.min.js" asp-append-version="true"></script>
-            <script src="~/assets/js/jquery.mb.YTPlayer.min.js" asp-append-version="true"></script>
-            <script src="~/assets/js/jquery.simple-text-rotator.min.js" asp-append-version="true"></script>
-            <script src="~/assets/js/imagesloaded.pkgd.js" asp-append-version="true"></script>
-            <script src="~/assets/js/isotope.pkgd.min.js" asp-append-version="true"></script>
-            <script src="~/assets/js/jquery.magnific-popup.min.js" asp-append-version="true"></script>
-            <script src="~/assets/js/owl.carousel.min.js" asp-append-version="true"></script>
-            <script src="~/assets/js/jquery.fitvids.min.js" asp-append-version="true"></script>
-            <script src="~/assets/js/jqBootstrapValidation.min.js" asp-append-version="true"></script>
-            <script src="~/assets/js/appear.min.js" asp-append-version="true"></script>
-            <script src="~/assets/js/wow.min.js" asp-append-version="true"></script>
-            <script src="~/assets/js/smoothscroll.min.js" asp-append-version="true"></script>
-            <script src="~/assets/js/submenu-fix.min.js" asp-append-version="true"></script>
-            <script src="~/assets/js/contact.min.js" asp-append-version="true"></script>
+            <script src="~/js/jquery.parallax-1.1.3.min.js" asp-append-version="true"></script>
+            <script src="~/js/jquery.superslides.min.js" asp-append-version="true"></script>
+            <script src="~/js/jquery.mb.YTPlayer.min.js" asp-append-version="true"></script>
+            <script src="~/js/jquery.simple-text-rotator.min.js" asp-append-version="true"></script>
+            <script src="~/js/imagesloaded.pkgd.js" asp-append-version="true"></script>
+            <script src="~/js/isotope.pkgd.min.js" asp-append-version="true"></script>
+            <script src="~/js/jquery.magnific-popup.min.js" asp-append-version="true"></script>
+            <script src="~/js/owl.carousel.min.js" asp-append-version="true"></script>
+            <script src="~/js/jquery.fitvids.min.js" asp-append-version="true"></script>
+            <script src="~/js/jqBootstrapValidation.min.js" asp-append-version="true"></script>
+            <script src="~/js/appear.min.js" asp-append-version="true"></script>
+            <script src="~/js/wow.min.js" asp-append-version="true"></script>
+            <script src="~/js/smoothscroll.min.js" asp-append-version="true"></script>
+            <script src="~/js/submenu-fix.min.js" asp-append-version="true"></script>
+            <script src="~/js/contact.min.js" asp-append-version="true"></script>
         </environment>
         <environment names="Staging,Production">
             <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
