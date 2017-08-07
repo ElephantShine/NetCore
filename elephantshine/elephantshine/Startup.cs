@@ -69,7 +69,7 @@ namespace elephantshine
                 .AddContentTypeOptionsNoSniff()
                 .AddCustomHeader("Content-Security-Policy",
                     $"default-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' az416426.vo.msecnd.net use.typekit.net www.googletagmanager.com; connect-src 'self' p.typekit.net use.typekit.net dc.services.visualstudio.com; img-src 'self' 'unsafe-inline' data: ; style-src 'self' 'unsafe-inline'; font-src 'self' use.typekit.net")
-                .AddCustomHeader("Strict-Transport-Security", "strict-transport-security: max-age=31536000; includeSubDomains");
+                .AddCustomHeader("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
 
             app.UseCustomHeadersMiddleware(policyCollection);
 
