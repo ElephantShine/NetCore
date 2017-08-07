@@ -14,6 +14,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.Options;
 using Microsoft.Net.Http.Headers;
+using NetEscapades.AspNetCore.SecurityHeaders;
 
 namespace elephantshine
 {
@@ -42,6 +43,7 @@ namespace elephantshine
 
             if (CurrentEnvironment.IsProduction())
             {
+                services.AddCustomHeaders();
                 services.Configure<MvcOptions>(options =>
                 {
                     options.Filters.Add(new RequireHttpsAttribute());
@@ -66,6 +68,15 @@ namespace elephantshine
             }
             else
             {
+                var policyCollection = new HeaderPolicyCollection()
+                    .RemoveCustomHeader("X-Powered-By")
+                    .AddFrameOptionsSameOrigin()
+                    .AddXssProtectionBlock()
+                    .AddContentTypeOptionsNoSniff()
+                    .AddCustomHeader("Content-Security-Policy", "default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self';");
+
+                app.UseCustomHeadersMiddleware(policyCollection);
+
                 app.UseRewriter(new RewriteOptions().AddRedirectToHttps());
                 app.UseExceptionHandler("/Home/Error");
             }
