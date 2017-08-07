@@ -41,9 +41,10 @@ namespace elephantshine
             // Add framework services.
             services.AddMvc();
 
+            services.AddCustomHeaders();
+
             if (CurrentEnvironment.IsProduction())
             {
-                services.AddCustomHeaders();
                 services.Configure<MvcOptions>(options =>
                 {
                     options.Filters.Add(new RequireHttpsAttribute());
@@ -61,6 +62,17 @@ namespace elephantshine
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
+            var scriptSha = "'sha256-biLFinpqYMtWHmXfkA1BPeCY0/fNt46SAZ+BBk5YUog=' 'sha256-ecWhDr96FSGceNEIev6UR56QjYVky0ki2IurFJXutME=' 'sha256-wIC7TJmBKkke1ow1DZyI3Fe4khkw4BRo4boumCrWxpM=' 'sha256-MmyG5eEYZrxp7+AJvsX9qxFm0IHEazoO1O08kzKJZc8=' 'sha256-y32bWOna2Hf9qV2TQLsWBWluRraZbhumRBZWYf2Dt/A=' 'sha256-IQvsXS2/+NRyY3cfdP1GI2nzrWSvIkbV9mNva/NMlmk=' 'sha256-t4e6bM+yQRP/ZAgPGB4ra4z1PddQu6kyTo54VZqGEmo=' 'sha256-y32bWOna2Hf9qV2TQLsWBWluRraZbhumRBZWYf2Dt/A=' 'sha256-anQSeQoEnQnBulZOQkDOFf+e6xBIGmqh7M8YFT992co=' ";
+
+
+            var policyCollection = new HeaderPolicyCollection()
+                .AddFrameOptionsSameOrigin()
+                .AddXssProtectionBlock()
+                .AddContentTypeOptionsNoSniff()
+                .AddCustomHeader("Content-Security-Policy", $"default-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' az416426.vo.msecnd.net use.typekit.net; connect-src 'self' p.typekit.net use.typekit.net dc.services.visualstudio.com; img-src 'self' 'unsafe-inline' data: ; style-src 'self' 'unsafe-inline'; font-src 'self' 'unsafe-inline' use.typekit.net");
+
+            app.UseCustomHeadersMiddleware(policyCollection);
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -68,15 +80,6 @@ namespace elephantshine
             }
             else
             {
-                var policyCollection = new HeaderPolicyCollection()
-                    .RemoveCustomHeader("X-Powered-By")
-                    .AddFrameOptionsSameOrigin()
-                    .AddXssProtectionBlock()
-                    .AddContentTypeOptionsNoSniff()
-                    .AddCustomHeader("Content-Security-Policy", "default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self'; style-src 'self';");
-
-                app.UseCustomHeadersMiddleware(policyCollection);
-
                 app.UseRewriter(new RewriteOptions().AddRedirectToHttps());
                 app.UseExceptionHandler("/Home/Error");
             }
