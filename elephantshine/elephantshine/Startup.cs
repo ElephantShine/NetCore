@@ -63,7 +63,7 @@ namespace elephantshine
             loggerFactory.AddDebug();
 
             var policyCollection = new HeaderPolicyCollection()
-                .AddReferrerPolicyNone()
+                .AddReferrerPolicyNoReferrer()
                 .AddFrameOptionsSameOrigin()
                 .AddXssProtectionBlock()
                 .AddContentTypeOptionsNoSniff()
