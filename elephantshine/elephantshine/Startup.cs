@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO.Compression;
 using System.Linq;
 using System.Threading.Tasks;
 using elephantshine.Models;
@@ -8,6 +9,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Razor.Parser;
+using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -51,6 +53,12 @@ namespace elephantshine
                 });
             }
 
+            services.Configure<GzipCompressionProviderOptions>(options => options.Level = CompressionLevel.Optimal);
+            services.AddResponseCompression(options =>
+            {
+                options.MimeTypes = new[] { "image/png", "image/jpg", "application/font-woff", "application/javascript", "text/plain", "text/css", "text/html", "application/json", "text/json" };
+            });
+
             services.Configure<List<Portfolio>>(Configuration.GetSection("Portfolios"));
             services.Configure<List<EnumCategory>>(Configuration.GetSection("EnableCategorys"));
             services.Configure<Settings>(Configuration.GetSection("Settings"));
@@ -59,6 +67,8 @@ namespace elephantshine
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+            app.UseResponseCompression();
+
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
