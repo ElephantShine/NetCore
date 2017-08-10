@@ -12,5 +12,10 @@ namespace elephantshine.Controllers
         {
             return View();
         }
+
+        public IActionResult Success()
+        {
+            return View();
+        }
     }
 }
