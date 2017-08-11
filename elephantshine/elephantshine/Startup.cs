@@ -56,7 +56,7 @@ namespace elephantshine
             services.Configure<GzipCompressionProviderOptions>(options => options.Level = CompressionLevel.Optimal);
             services.AddResponseCompression(options =>
             {
-                options.MimeTypes = new[] { "image/png", "image/jpg", "application/font-woff", "application/javascript", "text/plain", "text/css", "text/html", "application/json", "text/json" };
+                options.MimeTypes = new[] { "image/png", "image/jpg", "application/font-woff", "application/font-woff2", "application/javascript", "text/plain", "text/css", "text/html", "application/json", "text/json" };
                 options.EnableForHttps = true;
             });
 
