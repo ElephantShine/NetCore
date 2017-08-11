@@ -54,21 +54,13 @@
     <environment names="Production">
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9K6Q9" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
     </environment>
-
-    <div class="page-loader">
-        <div class="loader">Loading...</div>
-    </div>
-
+    <div class="page-loader"><div class="loader">Loading...</div></div>
     @await Html.PartialAsync("_Navbar")
-
     @RenderBody()
-
     @await Html.PartialAsync("_Footer")
-
     <div class="scroll-up">
         <a href="#totop"><i class="fa fa-angle-up"></i></a>
     </div>
-
     <script src="https://use.typekit.net/fft2wom.js"></script>
     <script>try { Typekit.load({ async: true }); } catch (e) { }</script>
     <script src="~/js/bundle.min.js" asp-append-version="true"></script>

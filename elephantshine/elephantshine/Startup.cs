@@ -79,7 +79,7 @@ namespace elephantshine
                 .AddXssProtectionBlock()
                 .AddContentTypeOptionsNoSniff()
                 .AddCustomHeader("Content-Security-Policy",
-                    $"default-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' az416426.vo.msecnd.net use.typekit.net www.googletagmanager.com; connect-src 'self' p.typekit.net use.typekit.net dc.services.visualstudio.com; img-src 'self' 'unsafe-inline' data: ; style-src 'self' 'unsafe-inline'; font-src 'self' use.typekit.net")
+                    $"default-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' az416426.vo.msecnd.net use.typekit.net www.googletagmanager.com; connect-src 'self' p.typekit.net use.typekit.net dc.services.visualstudio.com; img-src 'self' 'unsafe-inline' data: ; style-src 'self' 'unsafe-inline'; font-src 'self' use.typekit.net; frame-src 'self' www.facebook.com")
                 .AddCustomHeader("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
 
             app.UseCustomHeadersMiddleware(policyCollection);
