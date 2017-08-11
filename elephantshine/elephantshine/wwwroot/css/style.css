@@ -1136,6 +1136,10 @@ p.copyright {
     transform: translateY(10px);
 }
 
+h6.work-category {
+    color: #8e44ad;
+}
+
 .work-category {
     font-size: 14px;
     margin: 0;

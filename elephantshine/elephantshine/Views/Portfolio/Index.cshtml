@@ -30,15 +30,13 @@
                     <article class="work-item @portfolio.CategoryString">
                         <div class="work-wrapper">
                             <div class="work-thumbnail">
-                                <img src="@portfolio.FolderPath/01.png" alt="@portfolio.Title @portfolio.SubTitle">
+                                <img src="@portfolio.FolderPath/01.png" alt="@portfolio.Title @portfolio.SubTitle" title="@portfolio.Title @portfolio.SubTitle">
                             </div>
                             <div class="work-caption">
                                 <h3 class="work-title">@portfolio.Title</h3>
-                                <h6 class="work-category">
-                                    <a href="@portfolio.FolderPath">@portfolio.SubTitle</a>
-                                </h6>
+                                <h6 class="work-category">@portfolio.SubTitle</h6>
                             </div>
-                            <a href="@portfolio.FolderPath" class="work-link"></a>
+                            <a href="@portfolio.FolderPath" alt="@portfolio.Title" title="@portfolio.Title" class="work-link"></a>
                         </div>
                     </article>
                 }
