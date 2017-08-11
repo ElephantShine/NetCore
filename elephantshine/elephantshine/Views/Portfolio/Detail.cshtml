@@ -24,8 +24,8 @@
                         var url = $"{Model.Path}/{i:00}.png";
 
                         <p class="project-gallery">
-                            <a href="@url" class="project-gallery">
-                                <img src="@url" alt="">
+                            <a href="@url" class="project-gallery" alt="@Model.Title" title="@Model.Title">
+                                <img src="@url" alt="@Model.Title" title="@Model.Title">
                             </a>
                         </p>
                     }
